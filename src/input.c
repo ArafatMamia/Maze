@@ -1,4 +1,10 @@
 #include "../headers/header.h"
+
+/**
+ * SDL_KEYDOWN_FUNC - when key is down process input
+ * @event: union that contains structures for the event types
+ */
+
 void SDL_KEYDOWN_FUNC(SDL_Event event)
 {
 	if (event.key.keysym.sym == SDLK_ESCAPE)
@@ -13,6 +19,11 @@ void SDL_KEYDOWN_FUNC(SDL_Event event)
 		player.turnDirection = -1;
 }
 
+/**
+ * SDL_KEYUP_FUNC - when key is up process input
+ * @event: union that contains structures for the event types
+ */
+
 void SDL_KEYUP_FUNC(SDL_Event event)
 {
 	if (event.key.keysym.sym == SDLK_UP)
@@ -25,6 +36,10 @@ void SDL_KEYUP_FUNC(SDL_Event event)
 		player.turnDirection = 0;
 }
 
+/**
+ * handleInput - process input from the keyboard
+ */
+
 void handleInput(void)
 {
 	SDL_Event event;
@@ -35,7 +50,5 @@ void handleInput(void)
 		SDL_KEYDOWN_FUNC(event);
 	else if (event.type == SDL_KEYUP)
 		SDL_KEYUP_FUNC(event);
-	
-
-	
+		
 }

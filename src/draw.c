@@ -1,5 +1,15 @@
 #include "../headers/header.h"
-void drawRect(int x, int y, int width, int height, color_t color)
+
+/**
+ * drawRectangle - draw a rectangle
+ * @x: x coordinate
+ * @y: y coordinate
+ * @width: rectangle width
+ * @height: rectangle height
+ * @color: pixel color
+ */
+
+void drawRectangle(int x, int y, int width, int height, color_t color)
 {
 	int i, j;
 
@@ -9,7 +19,14 @@ void drawRect(int x, int y, int width, int height, color_t color)
 
 }
 
-
+/**
+ * drawLine - draw a line
+ * @x0: x coordinate start
+ * @y0: y coordinate start
+ * @x1: x coordinate end
+ * @y1: y coordinate end
+ * @color: pixel color
+ */
 void drawLine(int x0, int y0, int x1, int y1, color_t color)
 {
 		float xIncrement, yIncrement, currentX, currentY;

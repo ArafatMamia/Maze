@@ -4,10 +4,10 @@ static SDL_Renderer *renderer;
 static color_t *colorBuffer;
 static SDL_Texture *colorBufferTexture;
 static SDL_Window *win;
+
 /**
- * initializedWindow - Initialize the window to render the maze.
- * return - true in case of success, false if it fails.
- *
+ * initializedWindow - Initialize the window to render the maze
+ * return - true of false
  */
 
 bool initializedWindow(void)
@@ -56,7 +56,7 @@ bool initializedWindow(void)
 
 /**
  * clearColorBuffer - clear buffer for every frame
- * color - color buffer
+ * @color: color buffer
  */
 void clearColorBuffer(color_t color)
 {
@@ -81,17 +81,17 @@ void destroyWindow(void)
  */
 void renderColorBuffer(void)
 {
-	SDL_UpdateTexture(colorBufferTexture, 
-			NULL, 
-			colorBuffer, 
-			(int)(SCREEN_WIDTH * sizeof(color_t)));
+	SDL_UpdateTexture(colorBufferTexture, NULL, colorBuffer, 
+			  (int)(SCREEN_WIDTH * sizeof(color_t))
+			 );
 	SDL_RenderCopy(renderer, colorBufferTexture, NULL, NULL);
 	SDL_RenderPresent(renderer);
 }
 /**
  * drawPixel - assign a color to each pixel
- * x - x  pixel coordinate
- * y - y pixel coordinate 
+ * @x: x  pixel coordinate
+ * @y: y pixel coordinate 
+ * @color: color buffer
  */
 void drawPixel(int x, int y, color_t color)
 {
