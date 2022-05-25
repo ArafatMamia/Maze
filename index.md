@@ -6,12 +6,11 @@
     <li><a href="#intro"/>Introduction</a></li>
     <li><a href="#feature"/>Feature</a></li>
     <li><a href="#about"/>About</a></li>
-     <li><a type="button" href="https://github.com/khanmamia/Maze"/>About</a></li>
-  </ul>:wq
+     <li><a href="https://github.com/khanmamia/Maze"><input type="button> project <input/></a></li>
+  </ul>
   
   </header>
-
-  <img src="https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jpg", alt="maze"/>
+ <img src="https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jpg", alt="maze" />
   <br/>
 <h2 class="intro">Introduction</h2>
 <p>The main goal for this project is  to make a fully functioning game using a third party SDL library in 3D using raycasting that would challenge the player to think outside of the box and move in a different direction.</p>
