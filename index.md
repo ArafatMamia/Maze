@@ -1,5 +1,6 @@
 <html>
  <body>
+  <h1>Maze</h1>
   <header>
    <ul>
     <li><a href="#intro"/>Introduction</a></li>
@@ -7,7 +8,7 @@
     <li><a href="#about"/>About</a></li>
   </ul>
   </header>
-<h1>Maze</h1>
+
   <img src="https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jpg", alt="maze"/>
   <br/>
 <h2 class="intro">Introduction</h2>
