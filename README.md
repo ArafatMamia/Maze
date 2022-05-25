@@ -10,7 +10,7 @@ SDL officially supports Windows, mac 0S X, Linux, ios, and Android.
 * It gives an api for processing video ,audio processing, etc.
 
 # Installation
-  [project link] (git@github.com:khanmamia/Maze.git)
+  [project link] (https://github.com/khanmamia/Maze.git)
 
 # Usage
 * compile using make or make build
