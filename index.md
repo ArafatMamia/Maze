@@ -5,14 +5,19 @@
 The main goal for this project is  to make a fully functioning game using a third party SDL library in 3D using raycasting that would challenge the player to think outside of the box and move in a different direction. Another goal included adding enemies(e.g. obstacle ) to make the game interesting and using weapons . Finally, the constraint for time was an issue because the project took a lot of time..
 
 
-  <h2Directory layout</h2>
+  <h2>Directory layout</h2>
   <h3>Typical layout:</h3>
 
 Maze/            project folder
-|-- headers/     headers folder
+  <br/>
+|--headers/     headers folder
+    <br/>
 |-- src/         src folder
+    <br/>
 |-- image/       image folder
+    <br/>
 | --Makefile     makefile
+    <br/>
   <h2>Feature</h2> 
 
   <h2>About</h2> 
