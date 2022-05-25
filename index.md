@@ -1,4 +1,5 @@
 <html>
+ <body>
 <h1>Maze</h1>
   <br/>
 <h2>Introduction</h2>
@@ -28,10 +29,15 @@ So why did I choose such a project? The purpose of this project for me is firstl
 *  to learn how to develop a game without a game engine, without using the best free game engine like Unity or Unreal.
 *  finally, it is Alx portfolio project.
 
-###Arafat Mamia
+  <h3>Arafat Mamia</h3>
+  <br>
 **github**:-https://github.com/khanmamia/
+  <br/>
 **github project**:- https://github.com/khanmamia/Maze
+  <br/>
 **linkedin**:-https://www.linkedin.com/in/arafat-mamia-74a93a202/
+  <br/>
+  <body/>
 </html>
 
 
