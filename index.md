@@ -6,7 +6,7 @@
     <li><a href="#intro"/>Introduction</a></li>
     <li><a href="#feature"/>Feature</a></li>
     <li><a href="#about"/>About</a></li>
-    <li><input type="button><a href="https://github.com/khanmamia/Maze">project</a></input></li>
+    <a href="https://github.com/khanmamia/Maze" class="btn btn-primary">Project</a>
   </ul>
   
   </header>
