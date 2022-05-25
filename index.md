@@ -6,7 +6,9 @@
     <li><a href="#intro"/>Introduction</a></li>
     <li><a href="#feature"/>Feature</a></li>
     <li><a href="#about"/>About</a></li>
-  </ul>
+     <li><a type="button" href="https://github.com/khanmamia/Maze"/>About</a></li>
+  </ul>:wq
+  
   </header>
 
   <img src="https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jpg", alt="maze"/>
