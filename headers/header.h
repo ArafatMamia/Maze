@@ -1,17 +1,18 @@
 #pragma once
 #ifndef HEADER_H
 #define HEADER_H
-#include <SDL.h>
+
+//standard library
+#include <SDL2/SDL.h>
 #include <stdint.h>
 #include <math.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdbool.h>
-extern bool gameRunning;
-bool initializeWindow(void);
-void destroyWindow(void);
+#include <float.h>
 
-#define NUM_TEXTURES 8
+//constants
+
 #define PI 3.14159265
 #define TWO_PI 6.28318530
 #define TILE_SIZE 64
@@ -20,21 +21,64 @@ void destroyWindow(void);
 #define SCREEN_WIDTH (MAP_NUM_COLS * TILE_SIZE)
 #define SCREEN_HEIGHT (MAP_NUM_ROWS * TILE_SIZE)
 #define MINIMAP_SCALE_FACTOR 0.996
+#define MAP_NUM_ROWS 13
+#define MAP_NUM_COLS 20
+#define FOV_ANGLE (60 * (PI / 180))
+#define PROJ_PLANE ((SCREEN_WIDTH / 2) / tan(FOV_ANGLE / 2))
 #define FPS 30
 #define FRAME_TIME_LENGTH (1000 / FPS)
 #define NUM_RAYS SCREEN_WIDTH
-#define PROJ_PLANE ((SCREEN_WIDTH / 2) / tan(FOV_ANGLE / 2))
-#define FOV_ANGLE (60 * (PI / 180))
 typedef uint32_t color_t;
-void handleInput(void);
-void renderMap(void);
-void renderColorBuffer(void);
-void render_game(void);
-void drawPixel(int x, int y, color_t color);
-void drawRect(int x, int y, int width, int height, color_t color);
-void drawLine(int x0, int y0, int x1, int y1, color_t color);
-bool DetectCollision(float x, float y);
 
+//variables
+extern bool gameRunning;
+
+//function in window file
+bool initializedWindow(void);
+void renderColorBuffer(void);
+void destroyWindow(void);
+void drawPixel(int x, int y, color_t color);
+
+//function in main file
+void destroyGame(void);
+void setupGame(void);
+void updateGame(void);
+void renderGame(void);
+
+//function in draw file
+void drawRectangle(int x, int y, int width, int height, color_t color);
+void drawLine(int x0, int y0, int x1, int y1, color_t color);
+
+//function in rays file
+void castAllRays(void);
+void castRay(float rayAngle, int stripId);
+void renderRays(void);
+void horizontalInter(float rayAngle);
+void verticalInter(float rayAngle);
+
+//function in player file
+void movePlayer(float DeltaTime);
+void renderPlayer(void);
+
+//function in ray_direction file
+float distanceBetweenPoints(float x1, float y1, float x2, float y2);
+bool isRayFacingUp(float angle);
+bool isRayFacingDown(float angle);
+bool isRayFacingLeft(float angle);
+bool isRayFacingRight(float angle);
+
+//function in input file
+void SDL_KEYDOWN_FUNC(SDL_Event event);
+void SDL_KEYUP_FUNC(SDL_Event event);
+void handleInput(void);
+
+//function in map file
+bool DetectCollision(float x, float y);
+bool isInsideMap(float x, float y);
+void renderMap(void);
+int getMapValue(int row, int col);
+
+//structs for player
 typedef struct player_s
 {
 	float x;
@@ -48,7 +92,10 @@ typedef struct player_s
 	float turnSpeed;
 } player_t;
 
+//struct variable player
 extern player_t player;
+
+//structs for ray
 typedef struct ray_s
 {
 	float rayAngle;
@@ -59,10 +106,6 @@ typedef struct ray_s
 	int wallHitContent;
 } ray_t;
 
+//struct variable rays
 extern ray_t rays[NUM_RAYS];
-void renderRays(void);
-void movePlayer(float DeltaTime);
-void renderPlayer(void);
-void renderMap(void);
-void renderRays(void);
 #endif
