@@ -25,17 +25,17 @@ Maze/            project folder
   <h2>About</h2> 
 So why did I choose such a project? The purpose of this project for me is firstly,
   <ul>
-<li> to learn the mathematics and physics behind developing the game and learn computer graphics concepts like how to render
-*  to learn how to develop a game without a game engine, without using the best free game engine like Unity or Unreal.
-*  finally, it is Alx portfolio project.
-
+<li> to learn the mathematics and physics behind developing the game and learn computer graphics concepts like how to render</li>
+<li> to learn how to develop a game without a game engine, without using the best free game engine like Unity or Unreal.</li>
+<li>finally, it is Alx portfolio project.</li>
+  </ul>
   <h3>Arafat Mamia</h3>
   <br>
-**github**:-https://github.com/khanmamia/
+github:-https://github.com/khanmamia/
   <br/>
-**github project**:- https://github.com/khanmamia/Maze
+github project:- https://github.com/khanmamia/Maze
   <br/>
-**linkedin**:-https://www.linkedin.com/in/arafat-mamia-74a93a202/
+linkedin:-https://www.linkedin.com/in/arafat-mamia-74a93a202/
   <br/>
   <body/>
 </html>
