@@ -1,6 +1,7 @@
 <html>
  <body>
 <h1>Maze</h1>
+  <img src="https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jpg", alt="maze"/>
   <br/>
 <h2>Introduction</h2>
 <p>The main goal for this project is  to make a fully functioning game using a third party SDL library in 3D using raycasting that would challenge the player to think outside of the box and move in a different direction.</p>
