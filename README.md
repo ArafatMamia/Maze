@@ -9,15 +9,15 @@ SDL officially supports Windows, mac 0S X, Linux, ios, and Android.
 SDL is written in C, works natively with C++, and there are bindings available for several other languages.
 It gives an api for processing video ,audio processing, etc.
 
-# Instalation
-git@github.com:khanmamia/Maze.git
+# Installation
+* git@github.com:khanmamia/Maze.git
 
 #Usage
-@compile using make or make build
-@Execute ./maze or type make run
-@Use up and down arrow keys to move forward and backward (keys w and s serve the same function)
-@Use right and left arrow keys to turn the camera arround (keys d and a serve the same function)
+* compile using make or make build
+* Execute ./maze or type make run
+* Use up and down arrow keys to move forward and backward (keys w and s serve the same function)
+* Use right and left arrow keys to turn the camera arround (keys d and a serve the same function)
 
 #Compilation
-@$ gcc -Wall -Werror -Wextra -pedantic ./src/*.c -lm -o maze `sdl2-config --cflags` `sdl2-config --libs`;
+* $ gcc -Wall -Werror -Wextra -pedantic ./src/*.c -lm -o maze `sdl2-config --cflags` `sdl2-config --libs`;
 
