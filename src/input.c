@@ -43,12 +43,12 @@ void SDL_KEYUP_FUNC(SDL_Event event)
 void handleInput(void)
 {
 	SDL_Event event;
+
 	SDL_PollEvent(&event);
 	if (event.type == SDL_QUIT)
 		gameRunning = false;
 	else if (event.type == SDL_KEYDOWN)
 		SDL_KEYDOWN_FUNC(event);
 	else if (event.type == SDL_KEYUP)
-		SDL_KEYUP_FUNC(event);
-		
+		SDL_KEYUP_FUNC(event);	
 }

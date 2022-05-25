@@ -1,5 +1,10 @@
 #include "../headers/header.h"
 
+/**
+* movePlayer - set the next position of the player
+* @DeltaTime: time passed since the last frame
+*/
+
 void movePlayer(float DeltaTime)
 {
 	float moveStep, newPlayerX, newPlayerY;
@@ -18,9 +23,14 @@ void movePlayer(float DeltaTime)
 	}
 
 }
+
+/**
+* renderPlayer - render the player
+*/
+
 void renderPlayer(void)
 {
-	drawRect(
+	drawRectangle(
 		player.x * MINIMAP_SCALE_FACTOR,
 		player.y * MINIMAP_SCALE_FACTOR,
 		player.width * MINIMAP_SCALE_FACTOR,

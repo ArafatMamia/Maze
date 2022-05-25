@@ -24,7 +24,7 @@ bool initializedWindow(void)
 	SDL_GetCurrentDisplayMode(0, &display_mode);
 	fullScreenWidth = display_mode.w;
 	fullScreenHeight = display_mode.h;
-	window = SDL_CreateWindow(
+	win = SDL_CreateWindow(
 		NULL,
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,

@@ -1,4 +1,4 @@
-#include "..headers/header.h"
+#include "../headers/header.h"
 
 static const int map[MAP_NUM_ROWS][MAP_NUM_COLS] = {
 	{6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
@@ -16,6 +16,26 @@ static const int map[MAP_NUM_ROWS][MAP_NUM_COLS] = {
 	{6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6}
 };
 
+/**
+ * isInsideMap - check if we continue within the map
+ * @x: next x coordinate
+ * @y: next y coordinate
+ * @Return: true if it is within the map, false otherwise
+*/
+
+bool isInsideMap(float x, float y)
+{
+	return (x >= 0 && x <= MAP_NUM_COLS * TILE_SIZE &&
+		y >= 0 && y <= MAP_NUM_ROWS * TILE_SIZE);
+}
+
+/**
+ * DetectCollision - Checks if there could be a collision
+ * @x: next x coordinate
+ * @y: next y coordinate
+ * Return: true if collision is detected, false otherwise
+*/
+
 bool DetectCollision(float x, float y)
 {
 	int mapGridX, mapGridY;
@@ -28,6 +48,23 @@ bool DetectCollision(float x, float y)
 	mapGridY = floor(y / TILE_SIZE);
 	return (map[mapGridY][mapGridX] != 0);
 }
+
+/**
+ * getMapValue - check if we continue within the map
+ * @row: map row to check
+ * @col: map column to check
+ * @Return: The position value in the map
+*/
+int getMapValue(int row, int col)
+{
+
+	return (map[row][col]);
+
+}
+
+/**
+ * renderMap - render the map
+*/
 
 void renderMap(void)
 {
@@ -42,7 +79,7 @@ void renderMap(void)
 			tileY = i * TILE_SIZE;
 			tileColor = map[i][j] != 0 ? 0xFFFFFFFF : 0x00000000;
 
-			drawRect(
+			drawRectangle(
 				tileX* MINIMAP_SCALE_FACTOR,
 				tileY *MINIMAP_SCALE_FACTOR,
 				TILE_SIZE* MINIMAP_SCALE_FACTOR,

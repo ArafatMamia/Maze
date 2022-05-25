@@ -1,10 +1,14 @@
-#include "..headers/header.h"
+#include "../headers/header.h"
 
 bool gameRunning = false;
 int TicksLastFrame = 0;
 player_t player;
 
-void update_game(void)
+/**
+* updateGame - update delta time per frame
+*/
+
+void updateGame(void)
 {
 	float DeltaTime;
 	int timeToWait = FRAME_TIME_LENGTH - (SDL_GetTicks() - TicksLastFrame);
@@ -20,7 +24,10 @@ void update_game(void)
 	movePlayer(DeltaTime);
 }
 
-void setup_game(void)
+/**
+* setupGame - initialize player and load wall textures
+*/
+void setupGame(void)
 {
 
 	player.x = SCREEN_WIDTH / 2;
@@ -34,7 +41,11 @@ void setup_game(void)
 	player.rotationAngle = PI / 2;
 }
 
-void render_game(void)
+/**
+* renderGame - calls all functions for rendering
+*/
+
+void renderGame(void)
 {
 
 
@@ -45,17 +56,33 @@ void render_game(void)
 	renderColorBuffer();
 }
 
+/**
+* DestroyGame - free wall textures and destroy window
+*/
+
+void destroyGame(void)
+{
+	//freeWallTextures();
+	destroyWindow();
+
+}
+
+/**
+* main - entry point
+* Return: 0
+*/
+
 int main(void)
 {
-	gameRunning = initializeWindow();
-	setup_game();
+	gameRunning = initializedWindow();
+	setupGame();
 
 	while (gameRunning)
 
 	{
 		handleInput();
-		update_game();
-		render_game();
+		updateGame();
+		renderGame();
 		
 	}
 	destroyWindow();
