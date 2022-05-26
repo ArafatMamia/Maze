@@ -28,6 +28,7 @@
 #define FPS 30
 #define FRAME_TIME_LENGTH (1000 / FPS)
 #define NUM_RAYS SCREEN_WIDTH
+#define NUM_TEXTURES 8
 typedef uint32_t color_t;
 
 //variables
@@ -38,6 +39,7 @@ bool initializedWindow(void);
 void renderColorBuffer(void);
 void destroyWindow(void);
 void drawPixel(int x, int y, color_t color);
+void clearColorBuffer(color_t color);
 
 //function in main file
 void destroyGame(void);
@@ -108,4 +110,31 @@ typedef struct ray_s
 
 //struct variable rays
 extern ray_t rays[NUM_RAYS];
+
+/**
+ * struct texture_s - struct for the textures
+ * @width: texture width
+ * @height: texture height
+ * @texture_buffer: pointer to texture buffer
+ * @upngTexture: pointer to upng buffer
+ *
+ */
+
+typedef struct texture_s
+{
+	int width;
+	int height;
+	color_t* texture_buffer;
+	upng_t* upngTexture;
+} texture_t;
+
+texture_t wallTextures[NUM_TEXTURES];
+
+void WallTexturesready(void);
+void freeWallTextures(void);
+/* Functions-variables-structs for walls */
+void renderCeil(int wallTopPixel, color_t* texelColor, int x);
+void renderFloor(int wallBottomPixel, color_t* texelColor, int x);
+void changeColorIntensity(color_t* color, float factor);
+void renderWall(void);
 #endif
