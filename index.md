@@ -32,11 +32,40 @@ Maze/            project folder
 | --Makefile     makefile
     <br/>
   <h2 class="feature">Feature</h2> 
-  <img src="drawing walls.PNG", alt="maze" />
   <img src="flowchart2.PNG", alt="maze" />
-  <img src="maze2.PNG", alt="maze" />
-  <img src="dimension.PNG", alt="maze" />
-
+  <h3>DEFINING PROJECTION ATTRIBUTES</h3>
+<p>we need to define some attributes before we can project and render the world. Specifically, we need to know these attributes:</p>
+<ol>
+ <li> Player/viewer’s height, player’s field of view (FOV), and player’s position.</li>
+<li>  Projection plane’s dimension.</li>
+<li>  Relationship between player and projection plane.</li>
+ </ol>
+ <ul>
+<li>the player is 32 unit  half of the wall unit</li>
+<li> The FOV determines how wide the player sees the world in front of him/her</li>
+<li>To put the player inside the world, 
+we need to define the player’s X coordinate, the player’s Y coordinate, and the angle that the player is facing to. 
+These three attributes forms the “point of view” So now we know:</li>
+ <img src="dimension.PNG", alt="maze" />
+ So now we know:
+Dimension of the Projection Plane = 320 x 200 units
+Center of the Projection Plane = (160,100)
+Distance to the Projection Plane = 277 units
+Angle between subsequent rays = 60/320 degrees
+ <h3>FINDING WALLS</h3>
+<p>the wall can be viewed as collection of 320 vertical lines (or 320 wall slices).
+Instead of tracing a ray for every pixel on the screen, we can trace for only every vertical column of screen. The ray on the extreme left of the FOV will be projected onto column 0 of the projection plane, and the right  most ray will be projected onto column 319 of the projection plane.</p>
+ <ul>
+<li>Based on the viewing angle, subtract 30 degrees (half of the FOV).</li>
+<li>Starting from column 0:</li>
+<li>Cast a ray. Trace the ray until it hits a wall.</li>
+<li>Record the distance to the wall (the distance is equal to the length of the ray).</li>
+<li>Add the angle increment so that the ray moves to the right</li>
+To find walls, we need to check any grid intersection points that are encountered by the ray
+<p>The best way is to check for horizontal and vertical intersections separately.
+When there is a wall on either a vertical or a horizontal intersection, the checking stops. The distance to both intersection points is then compared, and the closer distance is chosen.</p>
+DRAWING WALLS
+<img src="drawing walls.PNG", alt="maze" />
   <h2 class="about">About</h2> 
 So why did I choose such a project? The purpose of this project for me is firstly,
   <ul>
