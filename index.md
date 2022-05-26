@@ -84,10 +84,6 @@ github project:- https://github.com/khanmamia/Maze
   <br/>
 linkedin:-https://www.linkedin.com/in/arafat-mamia-74a93a202/
   <br/>
- <h3>video</h3>
- <video width="320" height="240" controls>
-  <source src="[movie.mp4](https://youtu.be/dhO2_sklwEY)" type="video/mp4">
-</video>
   <body/>
 </html>
 
