@@ -45,7 +45,7 @@ Maze/            project folder
 <li> The FOV determines how wide the player sees the world in front of him/her</li>
 <li>To put the player inside the world, 
 we need to define the player’s X coordinate, the player’s Y coordinate, and the angle that the player is facing to. 
-These three attributes forms the “point of view” So now we know:</li>
+These three attributes forms the “point of view”:</li>
  <img src="dimension.PNG", alt="maze" />
  <h3>So now we know:</h3>
  <ul>
