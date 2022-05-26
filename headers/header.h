@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <float.h>
+#include "upng.h"
 
 //constants
 
