@@ -47,11 +47,13 @@ Maze/            project folder
 we need to define the player’s X coordinate, the player’s Y coordinate, and the angle that the player is facing to. 
 These three attributes forms the “point of view” So now we know:</li>
  <img src="dimension.PNG", alt="maze" />
- So now we know:
-Dimension of the Projection Plane = 320 x 200 units
-Center of the Projection Plane = (160,100)
-Distance to the Projection Plane = 277 units
-Angle between subsequent rays = 60/320 degrees
+ <h3>So now we know:</h3>
+ <ul>
+<li>Dimension of the Projection Plane = 320 x 200 units</li>
+<li>Center of the Projection Plane = (160,100)</li>
+<li>Distance to the Projection Plane = 277 units</li>
+<li>Angle between subsequent rays = 60/320 degrees</li>
+  </ul>
  <h3>FINDING WALLS</h3>
 <p>the wall can be viewed as collection of 320 vertical lines (or 320 wall slices).
 Instead of tracing a ray for every pixel on the screen, we can trace for only every vertical column of screen. The ray on the extreme left of the FOV will be projected onto column 0 of the projection plane, and the right  most ray will be projected onto column 319 of the projection plane.</p>
@@ -61,10 +63,11 @@ Instead of tracing a ray for every pixel on the screen, we can trace for only ev
 <li>Cast a ray. Trace the ray until it hits a wall.</li>
 <li>Record the distance to the wall (the distance is equal to the length of the ray).</li>
 <li>Add the angle increment so that the ray moves to the right</li>
+ </ul>
 To find walls, we need to check any grid intersection points that are encountered by the ray
 <p>The best way is to check for horizontal and vertical intersections separately.
 When there is a wall on either a vertical or a horizontal intersection, the checking stops. The distance to both intersection points is then compared, and the closer distance is chosen.</p>
-DRAWING WALLS
+ <h3>DRAWING WALLS</h3>
 <img src="drawing walls.PNG", alt="maze" />
   <h2 class="about">About</h2> 
 So why did I choose such a project? The purpose of this project for me is firstly,
