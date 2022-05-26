@@ -33,6 +33,9 @@ Maze/            project folder
     <br/>
   <h2 class="feature">Feature</h2> 
   <img src="drawing walls.PNG", alt="maze" />
+  <img src="flowchart2.PNG", alt="maze" />
+  <img src="maze2.PNG", alt="maze" />
+  <img src="drawing walls.PNG", alt="maze" />
 
   <h2 class="about">About</h2> 
 So why did I choose such a project? The purpose of this project for me is firstly,
