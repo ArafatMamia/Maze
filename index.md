@@ -32,7 +32,7 @@ Maze/            project folder
 | --Makefile     makefile
     <br/>
   <h2 class="feature">Feature</h2> 
-  <img src="[[https://i.ytimg.com/vi/STNqcqLRBgk/maxresdefault.jp](https://lh3.google.com/u/0/d/1TPEbikVNMskUq32XMeVfeUJVU8KnQ577=w200-h150-p-k-nu-iv1)g](https://github.com/khanmamia/Maze/blob/gh-pages/drawing%20walls.PNG)", alt="maze" />
+  <img src="drawing walls.PNG", alt="maze" />
 
   <h2 class="about">About</h2> 
 So why did I choose such a project? The purpose of this project for me is firstly,
