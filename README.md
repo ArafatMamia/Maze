@@ -20,4 +20,7 @@ SDL officially supports Windows, mac 0S X, Linux, ios, and Android.
 
 # Compilation
 * $ gcc -Wall -Werror -Wextra -pedantic ./src/*.c -lm -o maze `sdl2-config --cflags` `sdl2-config --libs`;
-
+# License 
+* is free and distributed under Creative Commons license
+# Contribute
+* Contributions are always welcome!
